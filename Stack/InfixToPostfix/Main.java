@@ -46,7 +46,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        String expression = "k+l-m*n+(o^p)*w/u/v*t+q";
+        String expression = "a+b*(c^d-e)^(f+g*h)-i";
         infixToPostfix(expression);
     }
 }
