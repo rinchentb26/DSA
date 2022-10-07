@@ -1,4 +1,6 @@
-
+/*
+    Stack Implementation using Java
+ */
 class Stack {
     int capacity;
     int top;
