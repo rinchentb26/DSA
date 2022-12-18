@@ -45,6 +45,42 @@ class Main {
         }
     }
 
+    static void pattern_6(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int spaces = 1; spaces <= n - row; spaces++) {
+                System.out.print(" " + " ");
+            }
+            for (int cols = 1; cols <= row; cols++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern_7(int n) {
+        for (int rows = 1; rows <= n; rows++) {
+            for (int spaces = 1; spaces <= rows - 1; spaces++) {
+                System.out.print(" " + " ");
+            }
+            for (int cols = 1; cols <= n - rows + 1; cols++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern_8(int n) {
+        for (int rows = 1; rows <= n; rows++) {
+            for (int spaces = 1; spaces <= n - rows; spaces++) {
+                System.out.print(" " + " ");
+            }
+            for (int cols = 1; cols <= 2 * rows - 1; cols++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]) {
         System.out.println("\n\n");
         pattern_1(5);
@@ -56,5 +92,11 @@ class Main {
         pattern_4(5);
         System.out.println("\n\n");
         pattern_5(5);
+        System.out.println("\n\n");
+        pattern_6(5);
+        System.out.println("\n\n");
+        pattern_7(5);
+        System.out.println("\n\n");
+        pattern_8(5);
     }
 }
