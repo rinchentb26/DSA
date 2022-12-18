@@ -1,6 +1,6 @@
-From Kunal Kushwaha's DSA Course - https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ
+From Kunal Kushwaha's Youtube - https://www.youtube.com/watch?v=lsOOs5J8ycw&ab_channel=KunalKushwaha
 
-```text
+```
 
 1.  *****
     *****
