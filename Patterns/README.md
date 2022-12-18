@@ -1,6 +1,7 @@
 From Kunal Kushwaha's Youtube - https://www.youtube.com/watch?v=lsOOs5J8ycw&ab_channel=KunalKushwaha
 
 ```
+> These are the patterns I've solved
 
 1.  *****
     *****
