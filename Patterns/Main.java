@@ -81,6 +81,12 @@ class Main {
         }
     }
 
+    static void pattern_9(int n) {
+        for (int rows = 1; rows <= n; rows++) {
+
+        }
+    }
+
     public static void main(String args[]) {
         System.out.println("\n\n");
         pattern_1(5);
