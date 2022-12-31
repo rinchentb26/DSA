@@ -82,8 +82,17 @@ class Main {
     }
 
     static void pattern_9(int n) {
-        for (int rows = 1; rows <= n; rows++) {
+        int space_count = 0;
+        for (int rows = n - 4; rows >= 1; rows--) {
 
+            for (int spaces = 1; spaces <= space_count; spaces++) {
+                System.out.print(" ");
+            }
+            for (int cols = 1; cols <= (rows * 2 - 1); cols++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println("");
+            space_count++;
         }
     }
 
@@ -104,5 +113,7 @@ class Main {
         pattern_7(5);
         System.out.println("\n\n");
         pattern_8(5);
+        System.out.println("\n\n");
+        pattern_9(9);
     }
 }
