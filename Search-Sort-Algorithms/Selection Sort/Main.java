@@ -1,14 +1,10 @@
-class Main {
-    static void display(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + "\t");
-        }
-    }
+import java.util.Arrays;
 
-    static void selection_sort(int arr[]) {
+class Main {
+
+    static void selection_sort(int[] arr) {
         int n = arr.length;
-        int i, j, k, temp;
+        int i, j, k;
         for (i = 0; i < n - 1; i++) {
             k = i;
             for (j = i + 1; j < n; j++) {
@@ -16,15 +12,20 @@ class Main {
                     k = j;
                 }
             }
-            temp = arr[i];
-            arr[i] = arr[k];
-            arr[k] = temp;
+            if (k != i) {
+                int temp = arr[i];
+                arr[i] = arr[k];
+                arr[k] = temp;
+            }
         }
     }
 
-    public static void main(String args[]) {
-        int arr[] = { 99, 22, 33, 44, -3, 2 };
+    public static void main(String[] args) {
+        int[] arr = { 5, 4, 3, 2, 1, 0 };
+        System.out.print("Initial Array: ");
+        System.out.println(Arrays.toString(arr));
         selection_sort(arr);
-        display(arr);
+        System.out.print("Sorted Array: ");
+        System.out.println(Arrays.toString(arr));
     }
 }
