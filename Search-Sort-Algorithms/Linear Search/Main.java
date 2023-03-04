@@ -1,23 +1,28 @@
+import java.util.Scanner;
+
 class Main {
     /*
      * Linear Search
      * Best Case: (1)
      * Average and Worst Case: (n)
      */
-    static Boolean linear_search(int arr[]) {
+    static int linear_search(int arr[], int key) {
         int n = arr.length;
-        int key = 11; // element we want to search for
         int i;
         for (i = 0; i < n; i++) {
             if (arr[i] == key) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 
     public static void main(String args[]) {
-        int arr[] = { 22, 33, 44, 55, 11 };
-        System.out.println(linear_search(arr));
+        Scanner sc = new Scanner(System.in);
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int key = sc.nextInt();
+        int res = linear_search(arr, key);
+        System.out.println(res >= 0 ? "Key found at index" + res : "Item Not found");\
+        sc.close();
     }
 }
