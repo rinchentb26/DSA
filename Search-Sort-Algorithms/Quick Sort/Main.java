@@ -43,7 +43,7 @@ class Main {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 3, 2, 1, 0, -1, -2, -3, -1000 };
+        int[] arr = { 90, 80, 70, 60, 50, 40 };
         System.out.print("Initial Array: ");
         System.out.println(Arrays.toString(arr));
         quick_sort(arr, 0, arr.length - 1);
