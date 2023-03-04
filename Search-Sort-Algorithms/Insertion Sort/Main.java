@@ -1,28 +1,26 @@
+import java.util.Arrays;
+
 class Main {
-    static void insertion_sort(int arr[]) {
-        int n = arr.length; // length of array
-        int i, j, key;
+    static void insertion_sort(int[] arr) {
+        int n = arr.length;
+        int i, j, temp;
         for (i = 1; i < n; i++) {
-            key = arr[i];
+            temp = arr[i];
             j = i - 1;
-            while (j >= 0 && arr[j] > key) {
+            while (j >= 0 && arr[j] > temp) {
                 arr[j + 1] = arr[j];
                 j--;
             }
-            arr[j + 1] = key;
+            arr[j + 1] = temp;
         }
     }
 
-    static void display(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + "\t");
-        }
-    }
-
-    public static void main(String args[]) {
-        int arr[] = { 88, 1, 90, 2, 77, 55 };
+    public static void main(String[] args) {
+        int[] arr = { 43, 23, 13, 0, -2 };
+        System.out.print("Initial Array: ");
+        System.out.println(Arrays.toString(arr));
         insertion_sort(arr);
-        display(arr);
+        System.out.print("Sorted Array: ");
+        System.out.println(Arrays.toString(arr));
     }
 }
