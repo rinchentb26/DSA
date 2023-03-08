@@ -1,11 +1,23 @@
+import java.util.Arrays;
+
 class Main {
-    public static void merge(int arr[], int left, int right, int mid) {
-        int[] temp = new int[right - left + 1];
-        int i, j, k;
-        i = left;
-        j = mid + 1;
-        k = 0;
-        while (i <= mid && j <= right) {
+    static void merge_sort(int arr[], int l, int h) {
+        if (l < h) {
+            // 80, 70 50 || 60, 40, 30
+            // 80, 70 || 50 || 60, 40, 30
+            int mid = l + (h - l) / 2;
+            merge_sort(arr, l, mid);
+            merge_sort(arr, mid + 1, h);
+            merge(arr, l, mid, h);
+        }
+    }
+
+    static void merge(int[] arr, int l, int mid, int h) {
+        int i = l;
+        int j = mid + 1;
+        int k = 0;
+        int[] temp = new int[h - l + 1];
+        while (i <= mid && j <= h) {
             if (arr[i] < arr[j]) {
                 temp[k++] = arr[i++];
             } else {
@@ -15,35 +27,21 @@ class Main {
         while (i <= mid) {
             temp[k++] = arr[i++];
         }
-        while (j <= right) {
+        while (j <= h) {
             temp[k++] = arr[j++];
         }
         k = 0;
-        for (i = left; i <= right; i++, k++) {
-            arr[i] = temp[k];
-        }
-    }
-
-    public static void display(int arr[], int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    public static void merge_sort(int arr[], int left, int right) {
-        if (left < right) {
-            int mid = (left + right) / 2;
-            merge_sort(arr, left, mid);
-            merge_sort(arr, mid + 1, right);
-            merge(arr, left, right, mid);
+        for (i = l; i <= h; i++) {
+            arr[i] = temp[k++];
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = { 99, 0, 102, -4, -2, -99, 12, 1 };
-        display(arr, arr.length);
+        int[] arr = { 80, 70, 50, 60, 40, 30 };
+        System.out.print("Initial Array: ");
+        System.out.println(Arrays.toString(arr));
         merge_sort(arr, 0, arr.length - 1);
-        display(arr, arr.length);
+        System.out.print("Sorted Array: ");
+        System.out.println(Arrays.toString(arr));
     }
 }
