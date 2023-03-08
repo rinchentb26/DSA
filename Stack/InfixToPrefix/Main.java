@@ -1,5 +1,11 @@
 import java.util.ArrayDeque;
 
+/*
+ *  1) Reverse Expression
+ * 2) Fix Brackets
+ * 3) Find Postfix
+ * 4) Reverse Postfix 
+ */
 class Main {
     static boolean isOperand(char c) {
         if (Character.isLetter(c))
